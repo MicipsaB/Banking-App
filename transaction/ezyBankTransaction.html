@@ -9,7 +9,6 @@
 </head>
 <body>
     <div class="dashboard-container">
-        <!-- Sidebar -->
         <aside class="sidebar">
             <h2 class="logo">EzyBank</h2>
             <nav>
@@ -17,14 +16,13 @@
                     <li><a href="../Dashboard/ezyBankDashboard.html">Tableau de board</a></li>
                     <li><a href="../Compte/ezyBankCompte.html">Mes Comptes</a></li>
                     <li><a href="transactions.html" class="active">Transactions</a></li>
-                    <li><a href="#">Paramètres</a></li>
+                    <li><a href="../Profil/ezyBankProfil.html">Profil</a></li>
                 </ul>
             </nav>
         </aside>
 
-        <!-- Main Content -->
-        <main class="main-content">
-            <!-- Sélection du compte -->
+     
+        <main class="main-content">       
             <section class="card-section">
                 <h2>Transactions par Compte</h2>
                 <label for="accountSelect">Choisissez un compte :</label>
@@ -32,12 +30,10 @@
                     <option value="compte_courant">Compte Courant</option>
                     <option value="compte_epargne">Compte d'Épargne</option>
                     <option value="compte_professionnel">Compte Professionnel</option>
-                    <option value="livret_a">Livret A</option>
-                    <option value="compte_retraite">Compte de Retraite</option>
                 </select>
             </section>
 
-            <!-- Formulaire d'ajout de transaction -->
+         
             <section class="card-section">
                 <h2>Ajouter une Transaction</h2>
                 <form id="transactionForm">
@@ -50,14 +46,10 @@
                     <label for="transactionAmount">Montant (€)</label>
                     <input type="number" id="transactionAmount" placeholder="Ex: 500" required min="0">
 
-                    <label for="transactionDate">Date</label>
-                    <input type="date" id="transactionDate" required>
-
                     <button type="submit" class="action-button">Ajouter</button>
                 </form>
             </section>
 
-            <!-- Historique des Transactions -->
             <section class="card-section">
                 <h2>Historique des Transactions</h2>
                 <div class="filters">
