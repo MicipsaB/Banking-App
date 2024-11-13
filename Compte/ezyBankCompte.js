@@ -26,16 +26,24 @@ $(document).ready(function() {
         $("#totalBalance").text(`${totalBalance.toFixed(2)} €`);
     }
 
-    // Ouvrir le modal pour ajouter un compte
-    $("#addAccountButton").click(function() {
-        $("#addAccountModal").fadeIn();
-    });
-
-    // Fermer le modal
-    $(".close-button").click(function() {
-        $("#addAccountModal").fadeOut();
-    });
-
+    
+        // Ouvrir le modal pour ajouter un compte
+        $("#addAccountButton").click(function() {
+            $("#addAccountModal").fadeIn();
+        });
+    
+        // Fermer le modal
+        $(".close-button").click(function() {
+            $("#addAccountModal").fadeOut();
+        });
+    
+        // Fermer le modal si l'utilisateur clique en dehors du contenu
+        $(window).on('click', function(event) {
+            if ($(event.target).is('#addAccountModal')) {
+                $("#addAccountModal").fadeOut();
+            }
+        });
+    
     // Ajouter un nouveau compte
     $("#addAccountForm").submit(function(event) {
         event.preventDefault();
