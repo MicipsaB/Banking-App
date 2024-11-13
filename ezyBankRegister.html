@@ -1,40 +1,71 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>EzyBank - Inscription</title>
-    <link rel="stylesheet" href="ezyBankRegister.css">
-</head>
-<body>
+    <link rel="stylesheet" href="ezyBankRegister.css" />
+  </head>
+  <body>
     <div class="main-container">
-        <div class="card">
-            <h1 class="brand-name">EzyBank</h1>
-            <p class="page-title">Inscription</p>
-            
-            <form class="register-form">
-                <label for="fullname" class="input-label">Nom et Prénom</label>
-                <input type="text" id="fullname" placeholder="Votre nom et prenom" class="input-field" required>
-                
-                <label for="email" class="input-label">E-Mail</label>
-                <input type="email" id="email" placeholder="Votre E-mail" class="input-field" required>
+      <div class="card">
+        <h1 class="brand-name">EzyBank</h1>
+        <p class="page-title">Inscription</p>
 
-                <label for="password" class="input-label">Password</label>
-                <input type="password" id="password" placeholder="********" class="input-field" required>
+        <form class="register-form">
+          <label for="name" class="input-label">Nom et Prénom</label>
+          <input
+            type="text"
+            id="name"
+            placeholder="Votre nom et prenom"
+            class="input-field"
+            required
+          />
 
-                <label for="confirm-password" class="input-label">Confirm Password</label>
-                <input type="password" id="confirm-password" placeholder="********" class="input-field" required>
+          <label for="email" class="input-label">E-Mail</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="Votre E-mail"
+            class="input-field"
+            required
+          />
 
-                <div class="checkbox-container">
-                    <input type="checkbox" id="remember-me">
-                    <label for="remember-me" class="checkbox-label">Se souvenir de moi</label>
-                </div>
-                
-                <button type="submit" class="action-button">Inscription</button>
-            </form>
-            
-            <p class="login-prompt">Vous avez un compte? <a href="esyBankLogin.html">Connexion</a></p>
-        </div>
+          <label for="password" class="input-label">Password</label>
+          <input
+            type="password"
+            id="password"
+            placeholder="********"
+            class="input-field"
+            required
+          />
+
+          <label for="confirm-password" class="input-label"
+            >Confirm Password</label
+          >
+          <input
+            type="password"
+            id="confirm-password"
+            placeholder="********"
+            class="input-field"
+            required
+          />
+
+          <div class="checkbox-container">
+            <input type="checkbox" id="remember-me" />
+            <label for="remember-me" class="checkbox-label"
+              >Se souvenir de moi</label
+            >
+          </div>
+
+          <button type="submit" class="action-button">Inscription</button>
+        </form>
+
+        <p class="login-prompt">
+          Vous avez un compte? <a href="ezyBankLogin.html">Connexion</a>
+        </p>
+      </div>
     </div>
-</body>
+    <script src="ezyBankRegister.js"></script>
+  </body>
 </html>
