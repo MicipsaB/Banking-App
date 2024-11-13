@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transactions - EzyBank</title>
+    <link rel="stylesheet" href="ezyBankTransaction.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2 class="logo">EzyBank</h2>
+            <nav>
+                <ul class="menu">
+                    <li><a href="../Dashboard/ezyBankDashboard.html">Tableau de board</a></li>
+                    <li><a href="../Compte/ezyBankCompte.html">Mes Comptes</a></li>
+                    <li><a href="transactions.html" class="active">Transactions</a></li>
+                    <li><a href="#">Paramètres</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Sélection du compte -->
+            <section class="card-section">
+                <h2>Transactions par Compte</h2>
+                <label for="accountSelect">Choisissez un compte :</label>
+                <select id="accountSelect">
+                    <option value="compte_courant">Compte Courant</option>
+                    <option value="compte_epargne">Compte d'Épargne</option>
+                    <option value="compte_professionnel">Compte Professionnel</option>
+                    <option value="livret_a">Livret A</option>
+                    <option value="compte_retraite">Compte de Retraite</option>
+                </select>
+            </section>
+
+            <!-- Formulaire d'ajout de transaction -->
+            <section class="card-section">
+                <h2>Ajouter une Transaction</h2>
+                <form id="transactionForm">
+                    <label for="transactionType">Type de Transaction</label>
+                    <select id="transactionType" required>
+                        <option value="deposit">Dépôt</option>
+                        <option value="withdrawal">Retrait</option>
+                    </select>
+                    
+                    <label for="transactionAmount">Montant (€)</label>
+                    <input type="number" id="transactionAmount" placeholder="Ex: 500" required min="0">
+
+                    <label for="transactionDate">Date</label>
+                    <input type="date" id="transactionDate" required>
+
+                    <button type="submit" class="action-button">Ajouter</button>
+                </form>
+            </section>
+
+            <!-- Historique des Transactions -->
+            <section class="card-section">
+                <h2>Historique des Transactions</h2>
+                <div class="filters">
+                    <label for="filterType">Filtrer par Type</label>
+                    <select id="filterType">
+                        <option value="all">Tous</option>
+                        <option value="deposit">Dépôt</option>
+                        <option value="withdrawal">Retrait</option>
+                    </select>
+                    
+                    <label for="filterPeriod">Filtrer par Période</label>
+                    <select id="filterPeriod">
+                        <option value="all">Toutes</option>
+                        <option value="7">7 derniers jours</option>
+                        <option value="30">30 derniers jours</option>
+                        <option value="90">90 derniers jours</option>
+                    </select>
+                    
+                    <button id="downloadCSV" class="download-button">Télécharger CSV</button>
+                </div>
+                
+                <table class="transactions-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Type</th>
+                            <th>Montant</th>
+                            <th>Solde Après Transaction</th>
+                        </tr>
+                    </thead>
+                    <tbody id="transactionHistory">
+                        <!-- Transactions dynamiques insérées ici -->
+                    </tbody>
+                </table>
+                <p id="noTransactionsMessage" style="display: none;">Aucune transaction trouvée pour ces critères.</p>
+            </section>
+        </main>
+    </div>
+
+    <script src="ezyBankTransaction.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Utilisateur - EzyBank</title>
+    <link rel="stylesheet" href="ezyBankProfil.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2 class="logo">EzyBank</h2>
+            <nav>
+                <ul class="menu">
+                    <li><a href="../Dashboard/ezyBankDashboard.html">Tableau de board</a></li>
+                    <li><a href="../Compte/ezyBankCompte.html">Mes Comptes</a></li>
+                    <li><a href="../transaction/ezyBankTransaction.html">Transactions</a></li>
+                    <li><a href="profile.html" class="active">Profil</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <section class="profile-card">
+                <h2>Profil Utilisateur</h2>
+                <p id="confirmationMessage" style="display: none; color: green; text-align: center; font-weight: bold;">Informations mises à jour avec succès !</p>
+                
+                <!-- Affichage des informations utilisateur -->
+                <div id="profileInfo" class="profile-info">
+                    <p><strong>Nom complet :</strong> <span id="displayUserFullName"></span></p>
+                    <p><strong>Email :</strong> <span id="displayUserEmail"></span></p>
+                    <button id="editButton" class="action-button">Modifier</button>
+                    <button id="logoutButton" class="logout-button">Déconnexion</button>
+                </div>
+
+                <!-- Formulaire de modification (caché par défaut) -->
+                <form id="profileForm" style="display: none;">
+                    <label for="userFullName">Nom complet</label>
+                    <input type="text" id="userFullName" placeholder="Nom et Prénom" required>
+                    
+                    <label for="userEmail">Email</label>
+                    <input type="email" id="userEmail" placeholder="Adresse email" required>
+                    
+                    <button type="submit" class="action-button">Enregistrer les Modifications</button>
+                    <button type="button" id="cancelButton" class="cancel-button">Annuler</button>
+                </form>
+            </section>
+        </main>
+    </div>
+
+    <script src="ezyBankProfil.js"></script>
+</body>
+</html>

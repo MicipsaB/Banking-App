@@ -1,0 +1,127 @@
+/* Reset des marges et paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style général de la page */
+body, html {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    font-family: Arial, sans-serif;
+    overflow: hidden; /* Supprime le défilement */
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    padding: 1.5rem 0; /* Ajoute un espace en haut et en bas pour centrer la carte */
+}
+
+.card {
+    background: linear-gradient(to right, #A1C4FD, #C2E9FB);
+    border-radius: 20px;
+    padding: 1.5rem; /* Réduit le padding pour économiser de l'espace */
+    max-width: 360px;
+    text-align: center;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.brand-name {
+    font-size: 1.8em; /* Réduit légèrement la taille de la marque */
+    color: #1a2a6c;
+    margin-bottom: 0.5rem;
+}
+
+.page-title {
+    font-size: 1.2em; /* Réduit la taille du titre de la page */
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.8rem; /* Réduit l'espacement entre les champs */
+}
+
+.input-label {
+    font-size: 0.9rem; /* Réduit la taille de police des labels */
+    color: #ffffff;
+    text-align: left;
+    margin-bottom: 0.2rem;
+}
+
+.input-field {
+    padding: 0.6rem; /* Réduit le padding des champs de saisie */
+    border: none;
+    border-radius: 25px;
+    font-size: 0.9rem; /* Réduit la taille de la police */
+    outline: none;
+    background-color: #ffffff;
+    color: #333;
+}
+
+.input-field::placeholder {
+    color: #999;
+    font-size: 0.85rem; /* Réduit la taille de la police des placeholders */
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.8rem; /* Réduit la taille de police de la case à cocher */
+    color: #ffffff;
+    margin-bottom: 0.8rem;
+}
+
+.checkbox-label {
+    font-size: 0.8rem; /* Réduit la taille de la police du texte */
+    color: #ffffff;
+}
+
+.action-button {
+    background-color: #63ABFF;
+    color: white;
+    padding: 0.6rem 1.2rem; /* Réduit la taille du bouton */
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 0.9rem; /* Réduit la taille de la police du bouton */
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    margin: auto;
+    width: 100%;
+}
+
+.action-button:hover {
+    background-color: #4799f0;
+}
+
+.login-prompt {
+    color: #ffffff;
+    font-size: 0.85rem; /* Réduit la taille de la police du texte de la connexion */
+    margin-top: 1rem;
+}
+
+.login-prompt a {
+    color: #5da3fa;
+    text-decoration: none;
+}
+
+.login-prompt a:hover {
+    text-decoration: underline;
+}
+

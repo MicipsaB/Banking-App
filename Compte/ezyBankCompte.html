@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comptes Bancaires - EzyBank</title>
+    <link rel="stylesheet" href="ezyBankCompte.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2 class="logo">EzyBank</h2>
+            <nav>
+                <ul class="menu">
+                    <li><a href="../Dashboard/ezyBankDashboard.html">Tableau de board</a></li>
+                    <li><a href="ezyBankCompte.html" class="active">Mes Comptes</a></li>
+                    <li><a href="../transaction/ezyBankTransaction.html">Transactions</a></li>
+                    <li><a href="#">Paramètres</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Solde Total -->
+            <section class="total-balance-card">
+                <h3>Solde Total</h3>
+                <p id="totalBalance">0 €</p>
+            </section>
+
+            <!-- Liste des Comptes Bancaires -->
+            <section class="card-section">
+                <h2>Mes Comptes Bancaires</h2>
+                <div class="accounts" id="accountsList">
+                    <!-- Comptes bancaires générés dynamiquement ici -->
+                </div>
+                <button id="addAccountButton" class="action-button">Ajouter un Compte</button>
+            </section>
+
+            <!-- Formulaire d'ajout de compte (modale au centre) -->
+            <div class="modal" id="addAccountModal">
+                <div class="modal-content">
+                    <span class="close-button">&times;</span>
+                    <h3>Ajouter un Nouveau Compte Bancaire</h3>
+                    <form id="addAccountForm">
+                        <label for="accountName">Nom du Compte</label>
+                        <input type="text" id="accountName" placeholder="Ex : Compte Épargne" required>
+                        
+                        <label for="accountType">Type de Compte</label>
+                        <select id="accountType" required>
+                            <option value="courant">Compte Courant</option>
+                            <option value="epargne">Compte d'Épargne</option>
+                            <option value="professionnel">Compte Business</option>
+                        </select>
+                        
+                        <label for="initialBalance">Solde Initial (€)</label>
+                        <input type="number" id="initialBalance" placeholder="Ex : 1000" required min="0">
+
+                        <label for="accountseuil">Seuil du Compte</label>
+                        <input type="text" id="accountSeuil" placeholder="Ex : 500" required>
+
+                        <button type="submit" class="action-button">Créer le Compte</button>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="ezyBankCompte.js"></script>
+</body>
+</html>

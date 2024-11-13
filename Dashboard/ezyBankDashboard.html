@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau de Bord - EzyBank</title>
+    <link rel="stylesheet" href="ezyBankDashboard.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2 class="logo">EzyBank</h2>
+            <nav>
+                <ul class="menu">
+                    <li><a href="ezyBankDashboard.html" class="active">Tableau de board</a></li>
+                    <li><a href="../Compte/ezyBankCompte.html">Mes Comptes</a></li>
+                    <li><a href="../transaction/ezyBankTransaction.html">Transactions</a></li>
+                    <li><a href="#">Paramètres</a></li>
+                    <li><a href="#">Sécurité</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="header">
+                <h1>Bonjour, Alice Dupont</h1>
+                <div class="profile">
+                    <span>Profile</span>
+                    <img src="profile.png" alt="Alice Dupont" class="profile-img">
+                </div>
+            </header>
+
+            <!-- Comptes Bancaires -->
+            <section class="card-section">
+                <h2>Comptes Bancaires</h2>
+                <div class="accounts">
+                    <div class="account-card" data-saldo="3500">
+                        <h3>Compte Courant</h3>
+                        <p class="balance">3 500 €</p>
+                      <a href="../transaction/ezyBankTransaction.html"><button>Voir Transactions</button></a>
+                    </div>
+                    <div class="account-card" data-saldo="10500">
+                        <h3>Compte d'Épargne</h3>
+                        <p class="balance">10 500 €</p>
+                        <a href="../transaction/ezyBankTransaction.html"><button>Voir Transactions</button></a>
+                    </div>
+                    <div class="account-card" data-saldo="2000">
+                        <h3>Compte Professionnel</h3>
+                        <p class="balance">2 000 €</p>
+                        <a href="../transaction/ezyBankTransaction.html"><button>Voir Transactions</button></a>
+                    </div>
+                    <div class="account-card" data-saldo="3000">
+                        <h3>Livret A</h3>
+                        <p class="balance">3 000 €</p>
+                        <a href="../transaction/ezyBankTransaction.html"><button>Voir Transactions</button></a>
+                    </div>
+                    <div class="account-card" data-saldo="4000">
+                        <h3>Compte de Retraite</h3>
+                        <p class="balance">4 000 €</p>
+                        <a href="../transaction/ezyBankTransaction.html"><button>Voir Transactions</button></a>
+                    </div>
+                </div>
+                <div class="total-balance-card">
+                    <h3>Solde Total</h3>
+                    <p id="totalBalance">0 €</p>
+                </div>
+            </section>
+
+            <!-- Dernières Transactions -->
+            <section class="card-section">
+                <h2>Dernières Transactions</h2>
+                <div class="transactions-card">
+                    <table class="transactions-table">
+                        <thead>
+                            <tr>
+                                <th>Date et heure</th>
+                                <th>Type Compte</th>
+                                <th>Description</th>
+                                <th>Montant</th>
+                                <th>Montant restant</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>20/10/2024 13:36</td>
+                                <td>Compte courant</td>
+                                <td>Voyage</td>
+                                <td class="transaction-amount">-2000</td>
+                                <td class="remaining-balance"></td>
+                            </tr>
+                            <tr>
+                                <td>20/10/2024 13:36</td>
+                                <td>Compte épargne</td>
+                                <td>Achat Vélo</td>
+                                <td class="transaction-amount">-1500</td>
+                                <td class="remaining-balance"></td>
+                            </tr>
+                            <tr>
+                                <td>20/10/2024 13:36</td>
+                                <td>Livret A</td>
+                                <td>Virement bnp</td>
+                                <td class="transaction-amount">+2200</td>
+                                <td class="remaining-balance"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <a href="#" class="history-link">Voir l'historique complet</a>
+                </div>
+            </section>
+
+            <!-- Notifications -->
+            <section class="card-section">
+                <h2>Notifications</h2>
+                <div id="notifications">
+                    <!-- Notifications dynamiques ajoutées ici par JavaScript -->
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="ezyBankDashboard.js"></script>
+</body>
+</html>
